@@ -1,6 +1,13 @@
 local M = {}
 
-M.groups = { "base" }
+M.groups = {
+    "base",
+    "syntax",
+    "lsp",
+    "treesitter",
+    "telescope",
+    "fugitive",
+}
 
 local me = debug.getinfo(1, "S").source:sub(2)
 me = vim.fn.fnamemodify(me, ":h")
@@ -10,28 +17,29 @@ local load_mod = function(name)
         return package.loaded[name]
     end
 
-    local ret = loadfile(me .. "/" .. name:gsub("%.", "/") .. ".lua")()
+    local ret = loadfile(me .. "/" .. name .. ".lua")()
     package.loaded[name] = ret
     return ret
 end
 
-local load_group = function(name, colors, opts)
-    local mod = load_mod(name)
+function M.load_group(name, colors, opts)
+    -- .colors suffix due to name conflicts in package loading
+    local mod = load_mod(name .. ".colors")
     return mod.get(colors, opts)
 end
 
-local set_group = function(group)
+function M.set_group(group)
     for name, value in pairs(group) do
         vim.api.nvim_set_hl(0, name, value)
     end
 end
 
 function M.set(opts)
-    local colors = require("nord_custom.palette")
+    local colors = require("nord.palette")
 
     for _, name in ipairs(M.groups) do
-        local group = load_group(name, colors, opts)
-        set_group(group)
+        local group = M.load_group(name, colors, opts)
+        M.set_group(group)
     end
 end
 

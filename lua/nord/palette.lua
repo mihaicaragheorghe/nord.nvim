@@ -4,6 +4,7 @@ return {
     nord1 = "#3B4252",
     nord2 = "#434C5E",
     nord3 = "#4C566A",
+	nord3_bright = "#616E88",
 
     -- Snow Storm
     nord4 = "#D8DEE9",

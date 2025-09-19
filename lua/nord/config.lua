@@ -4,7 +4,9 @@ M.defaults = {
     transparent = false,
     style = {
         bold = true,
-        italic = false
+        italic = true,
+        undercurl = true,
+        underline = true,
     }
 }
 
@@ -17,3 +19,5 @@ end
 function M.extend(opts)
     return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end
+
+return M
