@@ -48,6 +48,7 @@ function M.get(c, opts)
         TablineSel       = { fg = c.nord8, bg = c.nord3 },
         Title            = { fg = c.nord4, bg = c.none, bold = opts.style.bold },
         QuickFixLine     = { fg = c.nord4, bg = c.none },
+        ColorColumn      = { fg = c.none, bg = c.nord1 },
 
         NormalFloat      = { fg = c.nord4, bg = c.nord2 },
         FloatBorder      = { fg = c.nord4, bg = c.nord2 },
