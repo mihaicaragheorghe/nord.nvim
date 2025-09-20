@@ -38,7 +38,7 @@ function M.get(c, opts)
         Underlined          = { fg = c.nord14, bg = c.none, underline = opts.style.underline }, -- text that stands out, HTML links
         Ignore              = { fg = c.nord1 },                                                 -- left blank, hidden
 
-        Conceal             = { fg = c.nord1 },
+        Conceal             = { fg = c.none, bg = c.none },
         Decorator           = { fg = c.nord12 },
         Annotation          = { fg = c.nord12 },
 
