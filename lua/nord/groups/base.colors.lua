@@ -13,7 +13,7 @@ function M.get(c, opts)
         CursorLineNr     = { fg = c.nord13 },
         MatchParen       = { fg = c.nord13, bg = c.none },
         NonText          = { fg = c.nord2 },
-        Normal           = { fg = c.nord4, bg = c.nord0 },
+        Normal           = { fg = c.nord4, bg = opts.transparent and c.none or c.nord0 },
         Pmenu            = { fg = c.nord4, bg = c.nord2 },
         PmenuSbar        = { fg = c.nord4, bg = c.nord2 },
         PmenuSel         = { fg = c.nord8, bg = c.nord3 },
@@ -28,7 +28,7 @@ function M.get(c, opts)
         EndOfBuffer      = { fg = c.nord0 },
         Folded           = { fg = c.nord3_bright, bg = c.nord1, bold = opts.style.bold },
         FoldColumn       = { fg = c.nord3, bg = c.nord0 },
-        SignColumn       = { fg = c.nord0 },
+        SignColumn       = { fg = c.nord0, bg = opts.transparent and c.none or c.nord0 },
         Directory        = { fg = c.nord8, bg = c.none },
         ErrorMsg         = { fg = c.nord4, bg = c.nord11 },
         ModeMsg          = { fg = c.nord4 },
@@ -52,19 +52,20 @@ function M.get(c, opts)
 
         NormalFloat      = { fg = c.nord4, bg = c.nord2 },
         FloatBorder      = { fg = c.nord4, bg = c.nord2 },
+        FloatTitle       = { fg = c.nord4, bg = c.nord2 },
 
         healthError      = { fg = c.nord11 },
         healthSuccess    = { fg = c.nord14 },
         healthWarning    = { fg = c.nord13 },
         TermCursorNC     = { bg = c.nord1 },
 
-        DiffAdd          = { fg = c.nord14, bg = c.nord0, reverse = true },
-        DiffChange       = { fg = c.nord13, bg = c.nord0, reverse = true },
-        DiffDelete       = { fg = c.nord11, bg = c.nord0, reverse = true },
-        DiffText         = { fg = c.nord9, bg = c.nord0, reverse = true },
+        DiffAdd          = { fg = c.nord14, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
+        DiffChange       = { fg = c.nord13, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
+        DiffDelete       = { fg = c.nord11, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
+        DiffText         = { fg = c.nord9, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
 
         NERDTreeExecFile = { fg = c.nord7 },
-        VertSplit        = { fg = c.nord2, bg = c.nord0 },
+        VertSplit        = { fg = c.nord2, bg = c.none },
     }
 end
 

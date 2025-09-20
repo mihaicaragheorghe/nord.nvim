@@ -40,6 +40,7 @@ vim.cmd[[colorscheme nord]]
 ``` lua
 M.defaults = {
     transparent = false,
+    uniform_diff_bg = false,
     style = {
         bold = true,
         italic = true,

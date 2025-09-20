@@ -7,6 +7,8 @@ M.groups = {
     "treesitter",
     "telescope",
     "fugitive",
+    "gitsigns",
+    "undotree",
 }
 
 local me = debug.getinfo(1, "S").source:sub(2)
