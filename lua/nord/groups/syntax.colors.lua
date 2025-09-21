@@ -2,38 +2,38 @@ local M = {}
 
 function M.get(c, opts)
     return {
-        Boolean             = { fg = c.nord9 },                                                 -- TRUE, false
-        Character           = { fg = c.nord14 },                                                -- 'c', '\n'
         Comment             = { fg = c.nord3_bright, bg = c.none, italic = opts.style.italic }, -- comments
+        Function            = { fg = c.nord14 },                                                -- funtion names
+        String              = { fg = c.nord14 },                                                -- any string
         Conditional         = { fg = c.nord9 },                                                 -- italic if, then, else, endif, switch, etc.
+        Boolean             = { fg = c.nord8 },                                                 -- TRUE, false
+        Character           = { fg = c.nord14 },                                                -- 'c', '\n'
+        SpecialChar         = { fg = c.nord13 },                                                -- special character in a constant
+        Number              = { fg = c.nord15 },                                                -- a number constant: 5
+        Float               = { fg = c.nord15 },                                                -- a floating point constant: 2.3e10
         Constant            = { fg = c.nord4 },                                                 -- any constant
+        Variable            = { fg = c.nord4 },                                                 -- any variable name
+        Type                = { fg = c.nord8 },                                                 -- int, long, char, etc.
+        Structure           = { fg = c.nord9 },                                                 -- struct, union, enum, etc.
+        Typedef             = { fg = c.nord9 },                                                 -- A typedef
+        StorageClass        = { fg = c.nord9 },                                                 -- static, register, volatile, etc.
         Define              = { fg = c.nord9 },                                                 -- preprocessor #define
         Macro               = { fg = c.nord9 },                                                 -- same as Define
-        Delimiter           = { fg = c.nord6 },                                                 -- character that needs attention like , or .
-        Exception           = { fg = c.nord9 },                                                 -- try, catch, throw
-        Float               = { fg = c.nord15 },                                                -- a floating point constant: 2.3e10
-        Function            = { fg = c.nord8 },                                                 -- funtion names
-        Identifier          = { fg = c.nord4 },                                                 -- any variable name
-        Variable            = { fg = c.nord4 },                                                 -- any variable name
         Include             = { fg = c.nord9 },                                                 -- preprocessor #include
-        Keyword             = { fg = c.nord9 },                                                 -- for, do, while, etc.
-        Label               = { fg = c.nord9 },                                                 -- case, default, etc.
-        Number              = { fg = c.nord15 },                                                -- a number constant: 5
-        Operator            = { fg = c.nord9 },                                                 -- sizeof", "+", "*", etc.
+        Exception           = { fg = c.nord9 },                                                 -- try, catch, throw
+        Statement           = { fg = c.nord9 },                                                 -- any statement
         PreProc             = { fg = c.nord9 },                                                 -- generic Preprocessor
         PreCondit           = { fg = c.nord9 },                                                 -- preprocessor #if, #else, #endif, etc.
         Repeat              = { fg = c.nord9 },                                                 -- italic any other keyword
+        Operator            = { fg = c.nord9 },                                                 -- sizeof", "+", "*", etc.
+        Delimiter           = { fg = c.nord6 },                                                 -- character that needs attention like , or .
+        Keyword             = { fg = c.nord9 },                                                 -- for, do, while, etc.
+        Label               = { fg = c.nord9 },                                                 -- case, default, etc.
+        Identifier          = { fg = c.nord4 },                                                 -- any variable name
         Special             = { fg = c.nord4 },                                                 -- any special symbol
-        SpecialChar         = { fg = c.nord13 },                                                -- special character in a constant
         SpecialComment      = { fg = c.nord8 },                                                 -- special things inside a comment
-        Statement           = { fg = c.nord9 },                                                 -- any statement
-        StorageClass        = { fg = c.nord9 },                                                 -- static, register, volatile, etc.
-        String              = { fg = c.nord14 },                                                -- any string
-        Structure           = { fg = c.nord9 },                                                 -- struct, union, enum, etc.
         Tag                 = { fg = c.nord4 },                                                 -- you can use CTRL-] on this
         Todo                = { fg = c.nord13 },                                                -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-        Type                = { fg = c.nord9 },                                                 -- int, long, char, etc.
-        Typedef             = { fg = c.nord9 },                                                 -- A typedef
         Debug               = { fg = c.nord11 },                                                -- debugging statements
         Underlined          = { fg = c.nord14, bg = c.none, underline = opts.style.underline }, -- text that stands out, HTML links
         Ignore              = { fg = c.nord1 },                                                 -- left blank, hidden

@@ -10,8 +10,8 @@ function M.get(c, opts)
         LineNr           = { fg = c.nord3_bright },
         LineNrAbove      = { fg = c.nord3_bright },
         LineNrBelow      = { fg = c.nord3_bright },
-        CursorLineNr     = { fg = c.nord13 },
-        MatchParen       = { fg = c.nord13, bg = c.none },
+        CursorLineNr     = { fg = c.nord4 },
+        MatchParen       = { fg = c.nord14, bg = c.none },
         NonText          = { fg = c.nord2 },
         Normal           = { fg = c.nord4, bg = opts.transparent and c.none or c.nord0 },
         Pmenu            = { fg = c.nord4, bg = c.nord2 },
@@ -64,7 +64,8 @@ function M.get(c, opts)
         DiffDelete       = { fg = c.nord11, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
         DiffText         = { fg = c.nord9, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },
 
-        NERDTreeExecFile = { fg = c.nord7 },
+        netrwExe         = { fg = c.nord11 },
+        netrwClassify    = { fg = c.nord8 },
         VertSplit        = { fg = c.nord2, bg = c.none },
     }
 end
