@@ -13,7 +13,7 @@ function M.get(c, opts)
         Float               = { fg = c.nord15 },                                                -- a floating point constant: 2.3e10
         Constant            = { fg = c.nord4 },                                                 -- any constant
         Variable            = { fg = c.nord4 },                                                 -- any variable name
-        Type                = { fg = c.nord8 },                                                 -- int, long, char, etc.
+        Type                = { fg = c.nord7 },                                                 -- int, long, char, etc.
         Structure           = { fg = c.nord9 },                                                 -- struct, union, enum, etc.
         Typedef             = { fg = c.nord9 },                                                 -- A typedef
         StorageClass        = { fg = c.nord9 },                                                 -- static, register, volatile, etc.
@@ -22,13 +22,13 @@ function M.get(c, opts)
         Include             = { fg = c.nord9 },                                                 -- preprocessor #include
         Exception           = { fg = c.nord9 },                                                 -- try, catch, throw
         Statement           = { fg = c.nord9 },                                                 -- any statement
-        PreProc             = { fg = c.nord9 },                                                 -- generic Preprocessor
-        PreCondit           = { fg = c.nord9 },                                                 -- preprocessor #if, #else, #endif, etc.
-        Repeat              = { fg = c.nord9 },                                                 -- italic any other keyword
+        Repeat              = { fg = c.nord9 },                                                 -- any other keyword
         Operator            = { fg = c.nord9 },                                                 -- sizeof", "+", "*", etc.
-        Delimiter           = { fg = c.nord6 },                                                 -- character that needs attention like , or .
         Keyword             = { fg = c.nord9 },                                                 -- for, do, while, etc.
         Label               = { fg = c.nord9 },                                                 -- case, default, etc.
+        PreProc             = { fg = c.nord10 },                                                -- generic Preprocessor
+        PreCondit           = { fg = c.nord10 },                                                -- preprocessor #if, #else, #endif, etc.
+        Delimiter           = { fg = c.nord6 },                                                 -- character that needs attention like , or .
         Identifier          = { fg = c.nord4 },                                                 -- any variable name
         Special             = { fg = c.nord4 },                                                 -- any special symbol
         SpecialComment      = { fg = c.nord8 },                                                 -- special things inside a comment
