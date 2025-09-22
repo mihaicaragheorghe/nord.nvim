@@ -37,7 +37,7 @@ function M.set_group(group)
 end
 
 function M.set(opts)
-    local colors = require("nord.palette")
+    local colors = require("polarnight.palette")
 
     for _, name in ipairs(M.groups) do
         local group = M.load_group(name, colors, opts)

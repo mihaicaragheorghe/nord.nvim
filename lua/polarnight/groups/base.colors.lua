@@ -11,7 +11,7 @@ function M.get(c, opts)
         LineNrAbove      = { fg = c.nord3_bright },
         LineNrBelow      = { fg = c.nord3_bright },
         CursorLineNr     = { fg = c.nord4 },
-        MatchParen       = { fg = c.nord14, bg = c.none },
+        MatchParen       = { fg = c.nord13, bg = c.none },
         NonText          = { fg = c.nord2 },
         Normal           = { fg = c.nord4, bg = opts.transparent and c.none or c.nord0 },
         Pmenu            = { fg = c.nord4, bg = c.nord2 },
@@ -38,7 +38,7 @@ function M.get(c, opts)
         StatusLineNC     = { fg = c.nord4, bg = c.nord1 },
         StatusLineTerm   = { fg = c.nord4, bg = c.nord2 },
         StatusLineTermNC = { fg = c.nord4, bg = c.nord1 },
-        WarningMsg       = { fg = c.nord0, bg = c.nord13 },
+        WarningMsg       = { fg = c.nord0, bg = c.nord12 },
         WildMenu         = { fg = c.nord8, bg = c.nord1 },
         IncSearch        = { fg = c.nord6, bg = c.nord10 },
         Search           = { fg = c.nord1, bg = c.nord8 },
@@ -56,7 +56,7 @@ function M.get(c, opts)
 
         healthError      = { fg = c.nord11 },
         healthSuccess    = { fg = c.nord14 },
-        healthWarning    = { fg = c.nord13 },
+        healthWarning    = { fg = c.nord12 },
         TermCursorNC     = { bg = c.nord1 },
 
         DiffAdd          = { fg = c.nord14, bg = opts.uniform_diff_bg and c.nord1 or c.none, reverse = opts.uniform_diff_bg },

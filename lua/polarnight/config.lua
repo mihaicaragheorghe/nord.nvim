@@ -1,42 +1,5 @@
-# Polar Night
+local M = {}
 
-Nord-inspired neovim theme written in lua.
-
-![preview](../assets/preview.png)
-
-## Installation
-
-Install the theme with your preferred package manager
-
-``` lua
-{
-    'mihaicaragheorghe/polarnight.nvim',
-    priority = 1000,
-    config = function()
-        require('polarnight').setup {}
-        vim.cmd.colorscheme('polarnight')
-    end,
-}
-```
-
-## Usage
-
-```
-vim.cmd[[colorscheme polarnight]]
-```
-
-```
-:colorscheme polarnight
-```
-
-## Configuration
-
-`IMPORTANT` Set configuration before loading the colorscheme
-
-<details>
-    <summary>Defaults</summary>
-
-``` lua
 M.defaults = {
     style = {
         bold = true,                   -- Set to false this to disable bold font style
@@ -48,7 +11,15 @@ M.defaults = {
     transparent = false,               -- Enable this to disable setting the background color
     uniform_diff_bg = false,           -- Enable this to use colorful backgrounds for diffs
 }
-```
 
-</details>
+M.options = nil
 
+function M.setup(opts)
+    M.options = vim.tbl_deep_extend("force", {}, M.defaults, opts or {})
+end
+
+function M.extend(opts)
+    return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
+end
+
+return M

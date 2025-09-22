@@ -1,14 +1,14 @@
 local M = {}
 
 function M.load()
-    local config = require("nord.config")
-    local groups = require("nord.groups")
+    local config = require("polarnight.config")
+    local groups = require("polarnight.groups")
     groups.set(config.options)
     M.set_terminal()
 end
 
 function M.set_terminal()
-    local c = require("nord.palette")
+    local c = require("polarnight.palette")
     vim.g.terminal_color_0 = c.nord1
     vim.g.terminal_color_1 = c.nord11
     vim.g.terminal_color_2 = c.nord14
